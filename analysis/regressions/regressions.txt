@@ -1,0 +1,1550 @@
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Tue, May 28, 2019 - 01:53:54 PM
+\begin{table}[!htbp] \centering 
+  \caption{} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{1}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-2} 
+\\[-1.8ex] & black \\ 
+ & Black Identification \\ 
+\hline \\[-1.8ex] 
+ black\_anc\_only & 0.939$^{***}$ \\ 
+  & (0.001) \\ 
+  & \\ 
+ black\_anc\_other & 0.926$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ black\_anc\_none &  \\ 
+  &  \\ 
+  & \\ 
+ Constant & 0.005$^{***}$ \\ 
+  & (0.00003) \\ 
+  & \\ 
+\hline \\[-1.8ex] 
+Observations & 15,024,310 \\ 
+R$^{2}$ & 0.881 \\ 
+Adjusted R$^{2}$ & 0.881 \\ 
+Residual Std. Error & 0.112 (df = 15024307) \\ 
+F Statistic & 55,870,559.000$^{***}$ (df = 2; 15024307) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{1}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
+             used  (Mb) gc trigger    (Mb)   max used    (Mb)
+Ncells    1329080    71   14794748   790.2   24148271  1289.7
+Vcells 3713394656 28331 6400643820 48833.1 5552344166 42361.1
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Tue, May 28, 2019 - 01:54:59 PM
+\begin{table}[!htbp] \centering 
+  \caption{} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{1}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-2} 
+\\[-1.8ex] & black \\ 
+ & Black Identification \\ 
+\hline \\[-1.8ex] 
+ black\_anc\_only & 0.934$^{***}$ \\ 
+  & (0.001) \\ 
+  & \\ 
+ anti\_black\_any & $-$0.003$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ black\_anc\_other & 0.913$^{***}$ \\ 
+  & (0.0002) \\ 
+  & \\ 
+ black\_anc\_none &  \\ 
+  &  \\ 
+  & \\ 
+ year & $-$0.001$^{***}$ \\ 
+  & (0.00001) \\ 
+  & \\ 
+ age & 0.0001$^{***}$ \\ 
+  & (0.00000) \\ 
+  & \\ 
+ income & $-$0.000$^{***}$ \\ 
+  & (0.000) \\ 
+  & \\ 
+ metro & $-$0.00004 \\ 
+  & (0.0003) \\ 
+  & \\ 
+ own\_home & $-$0.007$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ woman & 0.001$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ married & $-$0.003$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ us\_born & $-$0.002$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ english & 0.006$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ above\_ba & $-$0.006$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ employed & 0.001$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ pop\_black & $-$0.000 \\ 
+  & (0.000) \\ 
+  & \\ 
+ pop\_pct\_black & 0.101$^{***}$ \\ 
+  & (0.0003) \\ 
+  & \\ 
+ black\_anc\_only:anti\_black\_any & $-$0.011$^{***}$ \\ 
+  & (0.001) \\ 
+  & \\ 
+ anti\_black\_any:black\_anc\_other & $-$0.001$^{***}$ \\ 
+  & (0.0002) \\ 
+  & \\ 
+ anti\_black\_any:black\_anc\_none &  \\ 
+  &  \\ 
+  & \\ 
+ Constant & 1.036$^{***}$ \\ 
+  & (0.018) \\ 
+  & \\ 
+\hline \\[-1.8ex] 
+Observations & 15,024,310 \\ 
+R$^{2}$ & 0.883 \\ 
+Adjusted R$^{2}$ & 0.883 \\ 
+Residual Std. Error & 1.237 (df = 15024291) \\ 
+F Statistic & 6,318,033.000$^{***}$ (df = 18; 15024291) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{1}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
+             used  (Mb) gc trigger    (Mb)   max used    (Mb)
+Ncells    1329081    71   14234957   760.3   24148271  1289.7
+Vcells 3713394653 28331 6400643820 48833.1 5776329533 44069.9
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Tue, May 28, 2019 - 01:56:25 PM
+\begin{table}[!htbp] \centering 
+  \caption{} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{1}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-2} 
+\\[-1.8ex] & black \\ 
+ & Black Identification \\ 
+\hline \\[-1.8ex] 
+ black\_anc\_only & 0.931$^{***}$ \\ 
+  & (0.001) \\ 
+  & \\ 
+ anti\_black\_sum & $-$0.0001$^{***}$ \\ 
+  & (0.00000) \\ 
+  & \\ 
+ black\_anc\_other & 0.914$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ black\_anc\_none &  \\ 
+  &  \\ 
+  & \\ 
+ year & $-$0.001$^{***}$ \\ 
+  & (0.00001) \\ 
+  & \\ 
+ age & 0.0001$^{***}$ \\ 
+  & (0.00000) \\ 
+  & \\ 
+ income & $-$0.000$^{***}$ \\ 
+  & (0.000) \\ 
+  & \\ 
+ metro & $-$0.0004 \\ 
+  & (0.0003) \\ 
+  & \\ 
+ own\_home & $-$0.008$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ woman & 0.001$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ married & $-$0.003$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ us\_born & $-$0.002$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ english & 0.006$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ above\_ba & $-$0.006$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ employed & 0.001$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ pop\_black & 0.000$^{***}$ \\ 
+  & (0.000) \\ 
+  & \\ 
+ pop\_pct\_black & 0.096$^{***}$ \\ 
+  & (0.0003) \\ 
+  & \\ 
+ black\_anc\_only:anti\_black\_sum & $-$0.001$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ anti\_black\_sum:black\_anc\_other & $-$0.0003$^{***}$ \\ 
+  & (0.00001) \\ 
+  & \\ 
+ anti\_black\_sum:black\_anc\_none &  \\ 
+  &  \\ 
+  & \\ 
+ Constant & 1.078$^{***}$ \\ 
+  & (0.018) \\ 
+  & \\ 
+\hline \\[-1.8ex] 
+Observations & 15,024,310 \\ 
+R$^{2}$ & 0.883 \\ 
+Adjusted R$^{2}$ & 0.883 \\ 
+Residual Std. Error & 1.237 (df = 15024291) \\ 
+F Statistic & 6,318,769.000$^{***}$ (df = 18; 15024291) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{1}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
+             used  (Mb) gc trigger    (Mb)   max used    (Mb)
+Ncells    1329085    71   13697558   731.6   24148271  1289.7
+Vcells 3713394655 28331 6400643820 48833.1 5776329612 44069.9
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Tue, May 28, 2019 - 01:57:23 PM
+\begin{table}[!htbp] \centering 
+  \caption{} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{1}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-2} 
+\\[-1.8ex] & black \\ 
+ & Black Identification \\ 
+\hline \\[-1.8ex] 
+ black\_anc\_only & 0.931$^{***}$ \\ 
+  & (0.001) \\ 
+  & \\ 
+ anti\_black\_mean & $-$0.002$^{***}$ \\ 
+  & (0.00004) \\ 
+  & \\ 
+ black\_anc\_other & 0.914$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ black\_anc\_none &  \\ 
+  &  \\ 
+  & \\ 
+ year & $-$0.001$^{***}$ \\ 
+  & (0.00001) \\ 
+  & \\ 
+ age & 0.0001$^{***}$ \\ 
+  & (0.00000) \\ 
+  & \\ 
+ income & $-$0.000$^{***}$ \\ 
+  & (0.000) \\ 
+  & \\ 
+ metro & $-$0.0004 \\ 
+  & (0.0003) \\ 
+  & \\ 
+ own\_home & $-$0.008$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ woman & 0.001$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ married & $-$0.003$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ us\_born & $-$0.002$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ english & 0.006$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ above\_ba & $-$0.006$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ employed & 0.001$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ pop\_black & 0.000$^{***}$ \\ 
+  & (0.000) \\ 
+  & \\ 
+ pop\_pct\_black & 0.096$^{***}$ \\ 
+  & (0.0003) \\ 
+  & \\ 
+ black\_anc\_only:anti\_black\_mean & $-$0.008$^{***}$ \\ 
+  & (0.001) \\ 
+  & \\ 
+ anti\_black\_mean:black\_anc\_other & $-$0.003$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ anti\_black\_mean:black\_anc\_none &  \\ 
+  &  \\ 
+  & \\ 
+ Constant & 1.078$^{***}$ \\ 
+  & (0.018) \\ 
+  & \\ 
+\hline \\[-1.8ex] 
+Observations & 15,024,310 \\ 
+R$^{2}$ & 0.883 \\ 
+Adjusted R$^{2}$ & 0.883 \\ 
+Residual Std. Error & 1.237 (df = 15024291) \\ 
+F Statistic & 6,318,769.000$^{***}$ (df = 18; 15024291) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{1}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
+             used  (Mb) gc trigger    (Mb)   max used    (Mb)
+Ncells    1329086    71   13181655   704.0   24148271  1289.7
+Vcells 3713394652 28331 6400643820 48833.1 5776329612 44069.9
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Tue, May 28, 2019 - 01:59:23 PM
+\begin{table}[!htbp] \centering 
+  \caption{} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{1}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-2} 
+\\[-1.8ex] & black \\ 
+ & Black Identification \\ 
+\hline \\[-1.8ex] 
+ black\_anc\_only & 0.931$^{***}$ \\ 
+  & (0.001) \\ 
+  & \\ 
+ black\_crime\_blackcap & 3.250$^{***}$ \\ 
+  & (0.099) \\ 
+  & \\ 
+ black\_anc\_other & 0.920$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ black\_anc\_none &  \\ 
+  &  \\ 
+  & \\ 
+ year & $-$0.001$^{***}$ \\ 
+  & (0.00001) \\ 
+  & \\ 
+ age & 0.0001$^{***}$ \\ 
+  & (0.00000) \\ 
+  & \\ 
+ income & $-$0.000$^{***}$ \\ 
+  & (0.000) \\ 
+  & \\ 
+ metro & 0.0001 \\ 
+  & (0.0003) \\ 
+  & \\ 
+ own\_home & $-$0.008$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ woman & 0.001$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ married & $-$0.003$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ us\_born & $-$0.002$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ english & 0.006$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ above\_ba & $-$0.005$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ employed & 0.001$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ pop\_black & $-$0.000$^{***}$ \\ 
+  & (0.000) \\ 
+  & \\ 
+ pop\_pct\_black & 0.096$^{***}$ \\ 
+  & (0.0003) \\ 
+  & \\ 
+ black\_anc\_only:black\_crime\_blackcap & $-$64.541$^{***}$ \\ 
+  & (5.063) \\ 
+  & \\ 
+ black\_crime\_blackcap:black\_anc\_other & $-$163.524$^{***}$ \\ 
+  & (0.690) \\ 
+  & \\ 
+ black\_crime\_blackcap:black\_anc\_none &  \\ 
+  &  \\ 
+  & \\ 
+ Constant & 1.009$^{***}$ \\ 
+  & (0.018) \\ 
+  & \\ 
+\hline \\[-1.8ex] 
+Observations & 15,024,310 \\ 
+R$^{2}$ & 0.884 \\ 
+Adjusted R$^{2}$ & 0.884 \\ 
+Residual Std. Error & 1.235 (df = 15024291) \\ 
+F Statistic & 6,343,810.000$^{***}$ (df = 18; 15024291) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{1}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
+             used    (Mb) gc trigger    (Mb)   max used    (Mb)
+Ncells   16352733   873.4   27548198  1471.3   24148271  1289.7
+Vcells 4417048642 33699.5 7680852584 58600.3 6399768444 48826.4
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Tue, May 28, 2019 - 02:00:54 PM
+\begin{table}[!htbp] \centering 
+  \caption{} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{1}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-2} 
+\\[-1.8ex] & black \\ 
+ & Black Identification \\ 
+\hline \\[-1.8ex] 
+ black\_anc\_only & 0.931$^{***}$ \\ 
+  & (0.001) \\ 
+  & \\ 
+ black\_crime\_black1000 & 0.003$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ black\_anc\_other & 0.920$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ black\_anc\_none &  \\ 
+  &  \\ 
+  & \\ 
+ year & $-$0.001$^{***}$ \\ 
+  & (0.00001) \\ 
+  & \\ 
+ age & 0.0001$^{***}$ \\ 
+  & (0.00000) \\ 
+  & \\ 
+ income & $-$0.000$^{***}$ \\ 
+  & (0.000) \\ 
+  & \\ 
+ metro & 0.0001 \\ 
+  & (0.0003) \\ 
+  & \\ 
+ own\_home & $-$0.008$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ woman & 0.001$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ married & $-$0.003$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ us\_born & $-$0.002$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ english & 0.006$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ above\_ba & $-$0.005$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ employed & 0.001$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ pop\_black & $-$0.000$^{***}$ \\ 
+  & (0.000) \\ 
+  & \\ 
+ pop\_pct\_black & 0.096$^{***}$ \\ 
+  & (0.0003) \\ 
+  & \\ 
+ black\_anc\_only:black\_crime\_black1000 & $-$0.065$^{***}$ \\ 
+  & (0.005) \\ 
+  & \\ 
+ black\_crime\_black1000:black\_anc\_other & $-$0.164$^{***}$ \\ 
+  & (0.001) \\ 
+  & \\ 
+ black\_crime\_black1000:black\_anc\_none &  \\ 
+  &  \\ 
+  & \\ 
+ Constant & 1.009$^{***}$ \\ 
+  & (0.018) \\ 
+  & \\ 
+\hline \\[-1.8ex] 
+Observations & 15,024,310 \\ 
+R$^{2}$ & 0.884 \\ 
+Adjusted R$^{2}$ & 0.884 \\ 
+Residual Std. Error & 1.235 (df = 15024291) \\ 
+F Statistic & 6,343,810.000$^{***}$ (df = 18; 15024291) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{1}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
+             used    (Mb) gc trigger    (Mb)   max used    (Mb)
+Ncells   16352734   873.4   27548198  1471.3   24148271  1289.7
+Vcells 4417048641 33699.5 7680852584 58600.3 7423250023 56635.0
+ [1] "statefip"              "countyfips"            "year"                  "age"                   "income"                "metro"                
+ [7] "own_home"              "woman"                 "married"               "us_born"               "english"               "above_ba"             
+[13] "employed"              "black"                 "black_anc_only"        "black_anc_other"       "black_anc_none"        "weight"               
+[19] "pop_black"             "pop_pct_black"         "anti_black_total"      "black_crime_cap"       "black_crime_1000"      "black_crime_blackcap" 
+[25] "black_crime_black1000"
+             used    (Mb) gc trigger    (Mb)   max used    (Mb)
+Ncells   16352741   873.4   27548198  1471.3   24148271  1289.7
+Vcells 4417048589 33699.5 7680852584 58600.3 7423250023 56635.0
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Tue, May 28, 2019 - 02:03:50 PM
+\begin{table}[!htbp] \centering 
+  \caption{} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{1}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-2} 
+\\[-1.8ex] & black \\ 
+ & Black Identification \\ 
+\hline \\[-1.8ex] 
+ black\_anc\_only & 0.930$^{***}$ \\ 
+  & (0.001) \\ 
+  & \\ 
+ anti\_black\_total & $-$0.00001$^{***}$ \\ 
+  & (0.00000) \\ 
+  & \\ 
+ black\_anc\_other & 0.915$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ black\_anc\_none &  \\ 
+  &  \\ 
+  & \\ 
+ year & $-$0.001$^{***}$ \\ 
+  & (0.00001) \\ 
+  & \\ 
+ age & 0.0001$^{***}$ \\ 
+  & (0.00000) \\ 
+  & \\ 
+ income & $-$0.000$^{***}$ \\ 
+  & (0.000) \\ 
+  & \\ 
+ metro & $-$0.0003 \\ 
+  & (0.0003) \\ 
+  & \\ 
+ own\_home & $-$0.008$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ woman & 0.001$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ married & $-$0.003$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ us\_born & $-$0.002$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ english & 0.006$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ above\_ba & $-$0.006$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ employed & 0.001$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ pop\_black & 0.000$^{***}$ \\ 
+  & (0.000) \\ 
+  & \\ 
+ pop\_pct\_black & 0.094$^{***}$ \\ 
+  & (0.0003) \\ 
+  & \\ 
+ black\_anc\_only:anti\_black\_total & $-$0.00005$^{***}$ \\ 
+  & (0.00001) \\ 
+  & \\ 
+ anti\_black\_total:black\_anc\_other & $-$0.00003$^{***}$ \\ 
+  & (0.00000) \\ 
+  & \\ 
+ anti\_black\_total:black\_anc\_none &  \\ 
+  &  \\ 
+  & \\ 
+ Constant & 1.002$^{***}$ \\ 
+  & (0.018) \\ 
+  & \\ 
+\hline \\[-1.8ex] 
+Observations & 15,024,310 \\ 
+R$^{2}$ & 0.883 \\ 
+Adjusted R$^{2}$ & 0.883 \\ 
+Residual Std. Error & 1.237 (df = 15024291) \\ 
+F Statistic & 6,319,592.000$^{***}$ (df = 18; 15024291) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{1}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
+             used    (Mb) gc trigger    (Mb)   max used    (Mb)
+Ncells   16353031   873.4   27548198  1471.3   24148271  1289.7
+Vcells 5100655207 38915.0 7680852584 58600.3 7423576201 56637.4
+             used    (Mb) gc trigger    (Mb)   max used    (Mb)
+Ncells   16352731   873.4   27548198  1471.3   24148271  1289.7
+Vcells 4417048567 33699.5 7680852584 58600.3 7423576201 56637.4
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Tue, May 28, 2019 - 02:06:11 PM
+\begin{table}[!htbp] \centering 
+  \caption{} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{1}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-2} 
+\\[-1.8ex] & black \\ 
+ & Black Identification \\ 
+\hline \\[-1.8ex] 
+ black\_anc\_only & 0.932$^{***}$ \\ 
+  & (0.001) \\ 
+  & \\ 
+ black\_crime\_1000 & 0.001 \\ 
+  & (0.001) \\ 
+  & \\ 
+ black\_anc\_other & 0.921$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ black\_anc\_none &  \\ 
+  &  \\ 
+  & \\ 
+ year & $-$0.0005$^{***}$ \\ 
+  & (0.00001) \\ 
+  & \\ 
+ age & 0.0001$^{***}$ \\ 
+  & (0.00000) \\ 
+  & \\ 
+ income & $-$0.000$^{***}$ \\ 
+  & (0.000) \\ 
+  & \\ 
+ metro & $-$0.001$^{***}$ \\ 
+  & (0.0003) \\ 
+  & \\ 
+ own\_home & $-$0.008$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ woman & 0.001$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ married & $-$0.003$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ us\_born & $-$0.002$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ english & 0.006$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ above\_ba & $-$0.006$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ employed & 0.001$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ pop\_black & $-$0.000$^{***}$ \\ 
+  & (0.000) \\ 
+  & \\ 
+ pop\_pct\_black & 0.101$^{***}$ \\ 
+  & (0.0003) \\ 
+  & \\ 
+ black\_anc\_only:black\_crime\_1000 & $-$0.079$^{***}$ \\ 
+  & (0.009) \\ 
+  & \\ 
+ black\_crime\_1000:black\_anc\_other & $-$0.144$^{***}$ \\ 
+  & (0.001) \\ 
+  & \\ 
+ black\_crime\_1000:black\_anc\_none &  \\ 
+  &  \\ 
+  & \\ 
+ Constant & 0.975$^{***}$ \\ 
+  & (0.018) \\ 
+  & \\ 
+\hline \\[-1.8ex] 
+Observations & 15,024,310 \\ 
+R$^{2}$ & 0.883 \\ 
+Adjusted R$^{2}$ & 0.883 \\ 
+Residual Std. Error & 1.236 (df = 15024291) \\ 
+F Statistic & 6,322,979.000$^{***}$ (df = 18; 15024291) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{1}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
+             used  (Mb) gc trigger    (Mb)   max used    (Mb)
+Ncells    1329104    71   22038558  1177.0   24148271  1289.7
+Vcells 3713394603 28331 7680852584 58600.3 7423576201 56637.4
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Tue, May 28, 2019 - 02:08:53 PM
+\begin{table}[!htbp] \centering 
+  \caption{} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{1}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-2} 
+\\[-1.8ex] & black \\ 
+ & Black Identification \\ 
+\hline \\[-1.8ex] 
+ black\_anc\_only & 0.934$^{***}$ \\ 
+  & (0.001) \\ 
+  & \\ 
+ black\_crime\_black1000 & 0.0005$^{***}$ \\ 
+  & (0.00001) \\ 
+  & \\ 
+ black\_anc\_other & 0.926$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ black\_anc\_none &  \\ 
+  &  \\ 
+  & \\ 
+ year & $-$0.0005$^{***}$ \\ 
+  & (0.00001) \\ 
+  & \\ 
+ age & 0.0001$^{***}$ \\ 
+  & (0.00000) \\ 
+  & \\ 
+ income & $-$0.000$^{***}$ \\ 
+  & (0.000) \\ 
+  & \\ 
+ metro & 0.001$^{***}$ \\ 
+  & (0.0003) \\ 
+  & \\ 
+ own\_home & $-$0.008$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ woman & 0.001$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ married & $-$0.003$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ us\_born & $-$0.002$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ english & 0.006$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ above\_ba & $-$0.005$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ employed & 0.001$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ pop\_black & $-$0.000$^{***}$ \\ 
+  & (0.000) \\ 
+  & \\ 
+ pop\_pct\_black & 0.091$^{***}$ \\ 
+  & (0.0003) \\ 
+  & \\ 
+ black\_anc\_only:black\_crime\_black1000 & $-$0.010$^{***}$ \\ 
+  & (0.001) \\ 
+  & \\ 
+ black\_crime\_black1000:black\_anc\_other & $-$0.023$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ black\_crime\_black1000:black\_anc\_none &  \\ 
+  &  \\ 
+  & \\ 
+ Constant & 0.951$^{***}$ \\ 
+  & (0.018) \\ 
+  & \\ 
+\hline \\[-1.8ex] 
+Observations & 15,024,310 \\ 
+R$^{2}$ & 0.884 \\ 
+Adjusted R$^{2}$ & 0.884 \\ 
+Residual Std. Error & 1.233 (df = 15024291) \\ 
+F Statistic & 6,365,451.000$^{***}$ (df = 18; 15024291) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{1}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
+             used    (Mb) gc trigger    (Mb)   max used    (Mb)
+Ncells   16352740   873.4   26486269  1414.6   24148271  1289.7
+Vcells 4417048590 33699.5 7680852584 58600.3 7678593461 58583.1
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Tue, May 28, 2019 - 02:11:08 PM
+\begin{table}[!htbp] \centering 
+  \caption{} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{1}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-2} 
+\\[-1.8ex] & hisp \\ 
+ & hisp Identification \\ 
+\hline \\[-1.8ex] 
+ hisp\_anc\_only & 0.965$^{***}$ \\ 
+  & (0.0004) \\ 
+  & \\ 
+ hisp\_anc\_other & 0.946$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ hisp\_anc\_none &  \\ 
+  &  \\ 
+  & \\ 
+ Constant & 0.009$^{***}$ \\ 
+  & (0.00004) \\ 
+  & \\ 
+\hline \\[-1.8ex] 
+Observations & 15,024,310 \\ 
+R$^{2}$ & 0.900 \\ 
+Adjusted R$^{2}$ & 0.900 \\ 
+Residual Std. Error & 0.124 (df = 15024307) \\ 
+F Statistic & 67,621,247.000$^{***}$ (df = 2; 15024307) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{1}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
+             used    (Mb) gc trigger    (Mb)   max used    (Mb)
+Ncells   16352749   873.4   26486269  1414.6   24148271  1289.7
+Vcells 4417048622 33699.5 7680852584 58600.3 7678593461 58583.1
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Tue, May 28, 2019 - 02:12:24 PM
+\begin{table}[!htbp] \centering 
+  \caption{} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{1}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-2} 
+\\[-1.8ex] & hisp \\ 
+ & hisp Identification \\ 
+\hline \\[-1.8ex] 
+ hisp\_anc\_only & 0.942$^{***}$ \\ 
+  & (0.001) \\ 
+  & \\ 
+ anti\_hisp\_any & $-$0.003$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ hisp\_anc\_other & 0.918$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ hisp\_anc\_none &  \\ 
+  &  \\ 
+  & \\ 
+ year & 0.001$^{***}$ \\ 
+  & (0.00001) \\ 
+  & \\ 
+ age & $-$0.0001$^{***}$ \\ 
+  & (0.00000) \\ 
+  & \\ 
+ income & $-$0.000$^{***}$ \\ 
+  & (0.000) \\ 
+  & \\ 
+ metro & $-$0.004$^{***}$ \\ 
+  & (0.0003) \\ 
+  & \\ 
+ own\_home & $-$0.004$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ woman & $-$0.001$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ married & $-$0.0001 \\ 
+  & (0.0001) \\ 
+  & \\ 
+ us\_born & $-$0.017$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ english & $-$0.011$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ above\_ba & $-$0.007$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ employed & 0.0003$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ pop\_hisp & $-$0.000$^{***}$ \\ 
+  & (0.000) \\ 
+  & \\ 
+ pop\_pct\_hisp & 0.072$^{***}$ \\ 
+  & (0.0003) \\ 
+  & \\ 
+ hisp\_anc\_only:anti\_hisp\_any & 0.013$^{***}$ \\ 
+  & (0.001) \\ 
+  & \\ 
+ anti\_hisp\_any:hisp\_anc\_other & 0.018$^{***}$ \\ 
+  & (0.0002) \\ 
+  & \\ 
+ anti\_hisp\_any:hisp\_anc\_none &  \\ 
+  &  \\ 
+  & \\ 
+ Constant & $-$1.558$^{***}$ \\ 
+  & (0.019) \\ 
+  & \\ 
+\hline \\[-1.8ex] 
+Observations & 15,024,310 \\ 
+R$^{2}$ & 0.909 \\ 
+Adjusted R$^{2}$ & 0.909 \\ 
+Residual Std. Error & 1.297 (df = 15024291) \\ 
+F Statistic & 8,360,505.000$^{***}$ (df = 18; 15024291) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{1}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
+             used    (Mb) gc trigger    (Mb)   max used    (Mb)
+Ncells   16352749   873.4   26486269  1414.6   24148271  1289.7
+Vcells 4417048622 33699.5 7680852584 58600.3 7678593461 58583.1
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Tue, May 28, 2019 - 02:13:29 PM
+\begin{table}[!htbp] \centering 
+  \caption{} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{1}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-2} 
+\\[-1.8ex] & hisp \\ 
+ & hisp Identification \\ 
+\hline \\[-1.8ex] 
+ hisp\_anc\_only & 0.946$^{***}$ \\ 
+  & (0.0005) \\ 
+  & \\ 
+ anti\_hisp\_sum & $-$0.0005$^{***}$ \\ 
+  & (0.00001) \\ 
+  & \\ 
+ hisp\_anc\_other & 0.923$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ hisp\_anc\_none &  \\ 
+  &  \\ 
+  & \\ 
+ year & 0.001$^{***}$ \\ 
+  & (0.00001) \\ 
+  & \\ 
+ age & $-$0.0001$^{***}$ \\ 
+  & (0.00000) \\ 
+  & \\ 
+ income & $-$0.000$^{***}$ \\ 
+  & (0.000) \\ 
+  & \\ 
+ metro & $-$0.004$^{***}$ \\ 
+  & (0.0003) \\ 
+  & \\ 
+ own\_home & $-$0.004$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ woman & $-$0.001$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ married & $-$0.0001 \\ 
+  & (0.0001) \\ 
+  & \\ 
+ us\_born & $-$0.018$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ english & $-$0.011$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ above\_ba & $-$0.007$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ employed & 0.0003$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ pop\_hisp & $-$0.000$^{***}$ \\ 
+  & (0.000) \\ 
+  & \\ 
+ pop\_pct\_hisp & 0.073$^{***}$ \\ 
+  & (0.0003) \\ 
+  & \\ 
+ hisp\_anc\_only:anti\_hisp\_sum & 0.001$^{***}$ \\ 
+  & (0.00005) \\ 
+  & \\ 
+ anti\_hisp\_sum:hisp\_anc\_other & 0.001$^{***}$ \\ 
+  & (0.00001) \\ 
+  & \\ 
+ anti\_hisp\_sum:hisp\_anc\_none &  \\ 
+  &  \\ 
+  & \\ 
+ Constant & $-$1.573$^{***}$ \\ 
+  & (0.019) \\ 
+  & \\ 
+\hline \\[-1.8ex] 
+Observations & 15,024,310 \\ 
+R$^{2}$ & 0.909 \\ 
+Adjusted R$^{2}$ & 0.909 \\ 
+Residual Std. Error & 1.297 (df = 15024291) \\ 
+F Statistic & 8,361,417.000$^{***}$ (df = 18; 15024291) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{1}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
+             used    (Mb) gc trigger    (Mb)   max used    (Mb)
+Ncells   16352749   873.4   26486269  1414.6   24148271  1289.7
+Vcells 4417048622 33699.5 7680852584 58600.3 7678593461 58583.1
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Tue, May 28, 2019 - 02:16:42 PM
+\begin{table}[!htbp] \centering 
+  \caption{} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{1}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-2} 
+\\[-1.8ex] & hisp \\ 
+ & hisp Identification \\ 
+\hline \\[-1.8ex] 
+ hisp\_anc\_only & 0.947$^{***}$ \\ 
+  & (0.0005) \\ 
+  & \\ 
+ hisp\_crime\_1000 & $-$0.173$^{***}$ \\ 
+  & (0.014) \\ 
+  & \\ 
+ hisp\_anc\_other & 0.927$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ hisp\_anc\_none &  \\ 
+  &  \\ 
+  & \\ 
+ year & 0.001$^{***}$ \\ 
+  & (0.00001) \\ 
+  & \\ 
+ age & $-$0.0001$^{***}$ \\ 
+  & (0.00000) \\ 
+  & \\ 
+ income & $-$0.000$^{***}$ \\ 
+  & (0.000) \\ 
+  & \\ 
+ metro & $-$0.004$^{***}$ \\ 
+  & (0.0003) \\ 
+  & \\ 
+ own\_home & $-$0.004$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ woman & $-$0.001$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ married & $-$0.00003 \\ 
+  & (0.0001) \\ 
+  & \\ 
+ us\_born & $-$0.017$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ english & $-$0.011$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ above\_ba & $-$0.007$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ employed & 0.0003$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ pop\_hisp & $-$0.000$^{***}$ \\ 
+  & (0.000) \\ 
+  & \\ 
+ pop\_pct\_hisp & 0.067$^{***}$ \\ 
+  & (0.0003) \\ 
+  & \\ 
+ hisp\_anc\_only:hisp\_crime\_1000 & 1.637$^{***}$ \\ 
+  & (0.192) \\ 
+  & \\ 
+ hisp\_crime\_1000:hisp\_anc\_other & 0.727$^{***}$ \\ 
+  & (0.034) \\ 
+  & \\ 
+ hisp\_crime\_1000:hisp\_anc\_none &  \\ 
+  &  \\ 
+  & \\ 
+ Constant & $-$1.551$^{***}$ \\ 
+  & (0.019) \\ 
+  & \\ 
+\hline \\[-1.8ex] 
+Observations & 15,024,310 \\ 
+R$^{2}$ & 0.909 \\ 
+Adjusted R$^{2}$ & 0.909 \\ 
+Residual Std. Error & 1.297 (df = 15024291) \\ 
+F Statistic & 8,353,544.000$^{***}$ (df = 18; 15024291) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{1}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
+             used  (Mb) gc trigger    (Mb)   max used    (Mb)
+Ncells    1329122    71   21189015  1131.7   24148271  1289.7
+Vcells 3713394647 28331 7680852584 58600.3 7678961139 58585.9
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Tue, May 28, 2019 - 02:17:31 PM
+\begin{table}[!htbp] \centering 
+  \caption{} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{1}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-2} 
+\\[-1.8ex] & hisp \\ 
+ & hisp Identification \\ 
+\hline \\[-1.8ex] 
+ hisp\_anc\_only & 0.950$^{***}$ \\ 
+  & (0.0004) \\ 
+  & \\ 
+ hisp\_crime\_hispcap & 6.199$^{***}$ \\ 
+  & (0.466) \\ 
+  & \\ 
+ hisp\_anc\_other & 0.931$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ hisp\_anc\_none &  \\ 
+  &  \\ 
+  & \\ 
+ year & 0.001$^{***}$ \\ 
+  & (0.00001) \\ 
+  & \\ 
+ age & $-$0.0001$^{***}$ \\ 
+  & (0.00000) \\ 
+  & \\ 
+ income & $-$0.000$^{***}$ \\ 
+  & (0.000) \\ 
+  & \\ 
+ metro & $-$0.004$^{***}$ \\ 
+  & (0.0003) \\ 
+  & \\ 
+ own\_home & $-$0.004$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ woman & $-$0.001$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ married & $-$0.00005 \\ 
+  & (0.0001) \\ 
+  & \\ 
+ us\_born & $-$0.017$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ english & $-$0.011$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ above\_ba & $-$0.007$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ employed & 0.0003$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ pop\_hisp & $-$0.000$^{***}$ \\ 
+  & (0.000) \\ 
+  & \\ 
+ pop\_pct\_hisp & 0.065$^{***}$ \\ 
+  & (0.0003) \\ 
+  & \\ 
+ hisp\_anc\_only:hisp\_crime\_hispcap & 19.936 \\ 
+  & (13.396) \\ 
+  & \\ 
+ hisp\_crime\_hispcap:hisp\_anc\_other & $-$157.344$^{***}$ \\ 
+  & (2.117) \\ 
+  & \\ 
+ hisp\_crime\_hispcap:hisp\_anc\_none &  \\ 
+  &  \\ 
+  & \\ 
+ Constant & $-$1.523$^{***}$ \\ 
+  & (0.019) \\ 
+  & \\ 
+\hline \\[-1.8ex] 
+Observations & 15,024,310 \\ 
+R$^{2}$ & 0.909 \\ 
+Adjusted R$^{2}$ & 0.909 \\ 
+Residual Std. Error & 1.297 (df = 15024291) \\ 
+F Statistic & 8,356,601.000$^{***}$ (df = 18; 15024291) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{1}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
+             used  (Mb) gc trigger    (Mb)   max used    (Mb)
+Ncells    1329126    71   16951212   905.3   24148271  1289.7
+Vcells 3713394651 28331 7680852584 58600.3 7678961139 58585.9
+             used  (Mb) gc trigger    (Mb)   max used    (Mb)
+Ncells    1329135    71   13560969   724.3   24148271  1289.7
+Vcells 3713394650 28331 7680852584 58600.3 7680213106 58595.4
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Tue, May 28, 2019 - 02:26:27 PM
+\begin{table}[!htbp] \centering 
+  \caption{} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{1}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-2} 
+\\[-1.8ex] & hisp \\ 
+ & hisp Identification \\ 
+\hline \\[-1.8ex] 
+ hisp\_anc\_only & 0.945$^{***}$ \\ 
+  & (0.0005) \\ 
+  & \\ 
+ anti\_hisp\_mean & $-$0.0004$^{***}$ \\ 
+  & (0.00001) \\ 
+  & \\ 
+ hisp\_anc\_other & 0.922$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ hisp\_anc\_none &  \\ 
+  &  \\ 
+  & \\ 
+ year & 0.001$^{***}$ \\ 
+  & (0.00001) \\ 
+  & \\ 
+ age & $-$0.0001$^{***}$ \\ 
+  & (0.00000) \\ 
+  & \\ 
+ income & $-$0.000$^{***}$ \\ 
+  & (0.000) \\ 
+  & \\ 
+ metro & $-$0.004$^{***}$ \\ 
+  & (0.0003) \\ 
+  & \\ 
+ own\_home & $-$0.004$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ woman & $-$0.001$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ married & $-$0.0001$^{*}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ us\_born & $-$0.018$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ english & $-$0.011$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ above\_ba & $-$0.007$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ employed & 0.0003$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ pop\_hisp & $-$0.000$^{***}$ \\ 
+  & (0.000) \\ 
+  & \\ 
+ pop\_pct\_hisp & 0.075$^{***}$ \\ 
+  & (0.0003) \\ 
+  & \\ 
+ hisp\_anc\_only:anti\_hisp\_mean & 0.001$^{***}$ \\ 
+  & (0.00005) \\ 
+  & \\ 
+ anti\_hisp\_mean:hisp\_anc\_other & 0.002$^{***}$ \\ 
+  & (0.00001) \\ 
+  & \\ 
+ anti\_hisp\_mean:hisp\_anc\_none &  \\ 
+  &  \\ 
+  & \\ 
+ Constant & $-$1.563$^{***}$ \\ 
+  & (0.019) \\ 
+  & \\ 
+\hline \\[-1.8ex] 
+Observations & 15,024,310 \\ 
+R$^{2}$ & 0.909 \\ 
+Adjusted R$^{2}$ & 0.909 \\ 
+Residual Std. Error & 1.296 (df = 15024291) \\ 
+F Statistic & 8,363,719.000$^{***}$ (df = 18; 15024291) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{1}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
+             used    (Mb) gc trigger    (Mb)   max used    (Mb)
+Ncells    1329165    71.0   15692635   838.1   24148271  1289.7
+Vcells 3728420970 28445.6 7680852584 58600.3 7680213106 58595.4
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Tue, May 28, 2019 - 02:27:49 PM
+\begin{table}[!htbp] \centering 
+  \caption{} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{1}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-2} 
+\\[-1.8ex] & hisp \\ 
+ & hisp Identification \\ 
+\hline \\[-1.8ex] 
+ hisp\_anc\_only & 0.945$^{***}$ \\ 
+  & (0.001) \\ 
+  & \\ 
+ hisp\_crime\_1000 & $-$0.044$^{***}$ \\ 
+  & (0.002) \\ 
+  & \\ 
+ hisp\_anc\_other & 0.925$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ hisp\_anc\_none &  \\ 
+  &  \\ 
+  & \\ 
+ year & 0.001$^{***}$ \\ 
+  & (0.00001) \\ 
+  & \\ 
+ age & $-$0.0001$^{***}$ \\ 
+  & (0.00000) \\ 
+  & \\ 
+ income & $-$0.000$^{***}$ \\ 
+  & (0.000) \\ 
+  & \\ 
+ metro & $-$0.004$^{***}$ \\ 
+  & (0.0003) \\ 
+  & \\ 
+ own\_home & $-$0.004$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ woman & $-$0.001$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ married & $-$0.00003 \\ 
+  & (0.0001) \\ 
+  & \\ 
+ us\_born & $-$0.017$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ english & $-$0.011$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ above\_ba & $-$0.007$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ employed & 0.0003$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ pop\_hisp & $-$0.000$^{***}$ \\ 
+  & (0.000) \\ 
+  & \\ 
+ pop\_pct\_hisp & 0.069$^{***}$ \\ 
+  & (0.0003) \\ 
+  & \\ 
+ hisp\_anc\_only:hisp\_crime\_1000 & 0.229$^{***}$ \\ 
+  & (0.021) \\ 
+  & \\ 
+ hisp\_crime\_1000:hisp\_anc\_other & 0.202$^{***}$ \\ 
+  & (0.004) \\ 
+  & \\ 
+ hisp\_crime\_1000:hisp\_anc\_none &  \\ 
+  &  \\ 
+  & \\ 
+ Constant & $-$1.551$^{***}$ \\ 
+  & (0.019) \\ 
+  & \\ 
+\hline \\[-1.8ex] 
+Observations & 15,024,310 \\ 
+R$^{2}$ & 0.909 \\ 
+Adjusted R$^{2}$ & 0.909 \\ 
+Residual Std. Error & 1.297 (df = 15024291) \\ 
+F Statistic & 8,354,756.000$^{***}$ (df = 18; 15024291) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{1}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
+             used    (Mb) gc trigger    (Mb)   max used    (Mb)
+Ncells    1329168    71.0   15096929   806.3   24148271  1289.7
+Vcells 3728420975 28445.6 7680852584 58600.3 7680213106 58595.4
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Tue, May 28, 2019 - 02:29:10 PM
+\begin{table}[!htbp] \centering 
+  \caption{} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{1}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-2} 
+\\[-1.8ex] & hisp \\ 
+ & hisp Identification \\ 
+\hline \\[-1.8ex] 
+ hisp\_anc\_only & 0.950$^{***}$ \\ 
+  & (0.0005) \\ 
+  & \\ 
+ hisp\_crime\_hispcap & 1.325$^{***}$ \\ 
+  & (0.073) \\ 
+  & \\ 
+ hisp\_anc\_other & 0.933$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ hisp\_anc\_none &  \\ 
+  &  \\ 
+  & \\ 
+ year & 0.001$^{***}$ \\ 
+  & (0.00001) \\ 
+  & \\ 
+ age & $-$0.0001$^{***}$ \\ 
+  & (0.00000) \\ 
+  & \\ 
+ income & $-$0.000$^{***}$ \\ 
+  & (0.000) \\ 
+  & \\ 
+ metro & $-$0.004$^{***}$ \\ 
+  & (0.0003) \\ 
+  & \\ 
+ own\_home & $-$0.004$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ woman & $-$0.001$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ married & $-$0.0001 \\ 
+  & (0.0001) \\ 
+  & \\ 
+ us\_born & $-$0.018$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ english & $-$0.011$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ above\_ba & $-$0.007$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ employed & 0.0003$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ pop\_hisp & $-$0.000$^{***}$ \\ 
+  & (0.000) \\ 
+  & \\ 
+ pop\_pct\_hisp & 0.062$^{***}$ \\ 
+  & (0.0003) \\ 
+  & \\ 
+ hisp\_anc\_only:hisp\_crime\_hispcap & $-$0.199 \\ 
+  & (1.753) \\ 
+  & \\ 
+ hisp\_crime\_hispcap:hisp\_anc\_other & $-$31.670$^{***}$ \\ 
+  & (0.299) \\ 
+  & \\ 
+ hisp\_crime\_hispcap:hisp\_anc\_none &  \\ 
+  &  \\ 
+  & \\ 
+ Constant & $-$1.556$^{***}$ \\ 
+  & (0.019) \\ 
+  & \\ 
+\hline \\[-1.8ex] 
+Observations & 15,024,310 \\ 
+R$^{2}$ & 0.909 \\ 
+Adjusted R$^{2}$ & 0.909 \\ 
+Residual Std. Error & 1.297 (df = 15024291) \\ 
+F Statistic & 8,360,098.000$^{***}$ (df = 18; 15024291) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{1}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
+             used    (Mb) gc trigger    (Mb)   max used    (Mb)
+Ncells    1329168    71.0   14525051   775.8   24148271  1289.7
+Vcells 3728420975 28445.6 7680852584 58600.3 7680213106 58595.4
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Tue, May 28, 2019 - 02:30:17 PM
+\begin{table}[!htbp] \centering 
+  \caption{} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{1}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-2} 
+\\[-1.8ex] & hisp \\ 
+ & hisp Identification \\ 
+\hline \\[-1.8ex] 
+ hisp\_anc\_only & 0.950$^{***}$ \\ 
+  & (0.0005) \\ 
+  & \\ 
+ hisp\_crime\_hisp1000 & 0.001$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ hisp\_anc\_other & 0.933$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ hisp\_anc\_none &  \\ 
+  &  \\ 
+  & \\ 
+ year & 0.001$^{***}$ \\ 
+  & (0.00001) \\ 
+  & \\ 
+ age & $-$0.0001$^{***}$ \\ 
+  & (0.00000) \\ 
+  & \\ 
+ income & $-$0.000$^{***}$ \\ 
+  & (0.000) \\ 
+  & \\ 
+ metro & $-$0.004$^{***}$ \\ 
+  & (0.0003) \\ 
+  & \\ 
+ own\_home & $-$0.004$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ woman & $-$0.001$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ married & $-$0.0001 \\ 
+  & (0.0001) \\ 
+  & \\ 
+ us\_born & $-$0.018$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ english & $-$0.011$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ above\_ba & $-$0.007$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ employed & 0.0003$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ pop\_hisp & $-$0.000$^{***}$ \\ 
+  & (0.000) \\ 
+  & \\ 
+ pop\_pct\_hisp & 0.062$^{***}$ \\ 
+  & (0.0003) \\ 
+  & \\ 
+ hisp\_anc\_only:hisp\_crime\_hisp1000 & $-$0.0002 \\ 
+  & (0.002) \\ 
+  & \\ 
+ hisp\_crime\_hisp1000:hisp\_anc\_other & $-$0.032$^{***}$ \\ 
+  & (0.0003) \\ 
+  & \\ 
+ hisp\_crime\_hisp1000:hisp\_anc\_none &  \\ 
+  &  \\ 
+  & \\ 
+ Constant & $-$1.556$^{***}$ \\ 
+  & (0.019) \\ 
+  & \\ 
+\hline \\[-1.8ex] 
+Observations & 15,024,310 \\ 
+R$^{2}$ & 0.909 \\ 
+Adjusted R$^{2}$ & 0.909 \\ 
+Residual Std. Error & 1.297 (df = 15024291) \\ 
+F Statistic & 8,360,098.000$^{***}$ (df = 18; 15024291) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{1}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
+             used    (Mb) gc trigger    (Mb)   max used    (Mb)
+Ncells    1329168    71.0   13976048   746.5   24148271  1289.7
+Vcells 3728420975 28445.6 7680852584 58600.3 7680213106 58595.4

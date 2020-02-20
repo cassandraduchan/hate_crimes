@@ -1,0 +1,76 @@
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Mon, Nov 12, 2018 - 11:39:45 AM
+% Requires LaTeX packages: dcolumn 
+\begin{table}[!htbp] \centering 
+  \caption{} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} } 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{1}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-2} 
+\\[-1.8ex] & \multicolumn{1}{c}{black} \\ 
+ & \multicolumn{1}{c}{Hispanic Identification} \\ 
+\hline \\[-1.8ex] 
+ black\_only & 0.939^{***} \\ 
+  & (0.001) \\ 
+  & \\ 
+ black\_crime\_per\_1000 & 0.001 \\ 
+  & (0.004) \\ 
+  & \\ 
+ black\_other & 0.400^{***} \\ 
+  & (0.0004) \\ 
+  & \\ 
+ black\_none &  \\ 
+  &  \\ 
+  & \\ 
+ AGE & 0.0001^{***} \\ 
+  & (0.00000) \\ 
+  & \\ 
+ woman & 0.001^{***} \\ 
+  & (0.0001) \\ 
+  & \\ 
+ abovehs & -0.0001 \\ 
+  & (0.0001) \\ 
+  & \\ 
+ INCTOT & -0.000^{***} \\ 
+  & (0.000) \\ 
+  & \\ 
+ metro & 0.003^{***} \\ 
+  & (0.0004) \\ 
+  & \\ 
+ home\_own & -0.004^{***} \\ 
+  & (0.0001) \\ 
+  & \\ 
+ married & -0.003^{***} \\ 
+  & (0.0001) \\ 
+  & \\ 
+ us\_born & -0.004^{***} \\ 
+  & (0.0003) \\ 
+  & \\ 
+ english & 0.002^{***} \\ 
+  & (0.0002) \\ 
+  & \\ 
+ black\_only:black\_crime\_per\_1000 & -0.560^{***} \\ 
+  & (0.051) \\ 
+  & \\ 
+ black\_crime\_per\_1000:black\_other & 0.217^{***} \\ 
+  & (0.025) \\ 
+  & \\ 
+ black\_crime\_per\_1000:black\_none &  \\ 
+  &  \\ 
+  & \\ 
+ Constant & 0.002^{***} \\ 
+  & (0.001) \\ 
+  & \\ 
+\hline \\[-1.8ex] 
+Observations & \multicolumn{1}{c}{3,992,594} \\ 
+R$^{2}$ & \multicolumn{1}{c}{0.506} \\ 
+Adjusted R$^{2}$ & \multicolumn{1}{c}{0.506} \\ 
+Residual Std. Error & \multicolumn{1}{c}{0.095 (df = 3992579)} \\ 
+F Statistic & \multicolumn{1}{c}{292,206.100$^{***}$ (df = 14; 3992579)} \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{1}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 

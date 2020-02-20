@@ -1,0 +1,91 @@
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Fri, Jun 07, 2019 - 09:20:19 AM
+\begin{table}[!htbp] \centering 
+  \caption{} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}}lc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{1}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-2} 
+\\[-1.8ex] & black \\ 
+ & Black Identification \\ 
+\hline \\[-1.8ex] 
+ black\_anc\_only & 0.929$^{***}$ \\ 
+  & (0.002) \\ 
+  & \\ 
+ anti\_black\_violent\_any & $-$0.002$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ black\_anc\_other & 0.908$^{***}$ \\ 
+  & (0.0002) \\ 
+  & \\ 
+ black\_anc\_none &  \\ 
+  &  \\ 
+  & \\ 
+ year & $-$0.0005$^{***}$ \\ 
+  & (0.00001) \\ 
+  & \\ 
+ age & 0.0001$^{***}$ \\ 
+  & (0.00000) \\ 
+  & \\ 
+ income & $-$0.000$^{***}$ \\ 
+  & (0.000) \\ 
+  & \\ 
+ metro & $-$0.001$^{***}$ \\ 
+  & (0.0004) \\ 
+  & \\ 
+ own\_home & $-$0.007$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ woman & 0.001$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ married & $-$0.003$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ us\_born & $-$0.00004 \\ 
+  & (0.0001) \\ 
+  & \\ 
+ english & 0.005$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ above\_ba & $-$0.005$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ employed & 0.001$^{***}$ \\ 
+  & (0.0001) \\ 
+  & \\ 
+ pop\_black & $-$0.000$^{***}$ \\ 
+  & (0.000) \\ 
+  & \\ 
+ pop\_pct\_black & 0.099$^{***}$ \\ 
+  & (0.0003) \\ 
+  & \\ 
+ black\_anc\_only:anti\_black\_violent\_any & $-$0.005$^{**}$ \\ 
+  & (0.002) \\ 
+  & \\ 
+ anti\_black\_violent\_any:black\_anc\_other & 0.005$^{***}$ \\ 
+  & (0.0003) \\ 
+  & \\ 
+ anti\_black\_violent\_any:black\_anc\_none &  \\ 
+  &  \\ 
+  & \\ 
+ Constant & 0.984$^{***}$ \\ 
+  & (0.019) \\ 
+  & \\ 
+\hline \\[-1.8ex] 
+Observations & 12,573,776 \\ 
+R$^{2}$ & 0.885 \\ 
+Adjusted R$^{2}$ & 0.885 \\ 
+Residual Std. Error & 1.182 (df = 12573757) \\ 
+F Statistic & 5,373,579.000$^{***}$ (df = 18; 12573757) \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{1}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table} 
+             used    (Mb) gc trigger    (Mb)   max used    (Mb)
+Ncells    1093853    58.5   19327832  1032.3   24159791  1290.3
+Vcells 2683323346 20472.2 5333825178 40693.9 4620453308 35251.3

@@ -1,0 +1,372 @@
+setwd("mnt/DARCE/_Research")
+install.packages("tidyverse")
+##bringing in the county data, cleaning it
+##home
+# setwd("C:/Users/cassa/Google Drive/Research Projects/hate_crimes")
+##work
+setwd("/mnt/DARCE/_Research/_Cassandra Duchan/research/hate_crimes/build/code")
+# setwd("Y:/_Research/_Cassandra Duchan/research/hate_crimes/build/code")
+library("tidyverse", warn.conflicts = FALSE)
+library("haven", warn.conflicts = FALSE)
+library("doBy", warn.conflicts = FALSE)
+setwd("/mnt/DARCE/_Research/_Cassandra Duchan/research/hate_crimes/build/inputs")
+# setwd("Y:/_Research/_Cassandra Duchan/research/hate_crimes/build/inputs")
+county_data <- read_csv("county_demos.csv")
+county_data <- data.frame(county_data)
+##cleaning
+colnames(county_data)[colnames(county_data)=="COUNTY"] <- "countyfips"
+colnames(county_data)[colnames(county_data)=="STATE"] <- "statefip"
+colnames(county_data)[colnames(county_data)=="AGEGRP"] <- "age_grp"
+colnames(county_data)[colnames(county_data)=="YEAR"] <- "year"
+colnames(county_data)[colnames(county_data)=="TOT_POP"] <- "population"
+##calculating racial populations
+##these groups alone or "in combination"
+##i.e., Asian alone or in combination male population
+##codebook here: https://www2.census.gov/programs-surveys/popest/technical-documentation/file-layouts/2010-2017/cc-est2017-alldata.pdf
+county_data <- mutate(county_data, black_pop = BAC_MALE + BAC_FEMALE)
+county_data <- mutate(county_data, hisp_pop = H_MALE + H_FEMALE)
+county_data <- mutate(county_data, native_pop = IAC_MALE + IAC_FEMALE)
+county_data <- mutate(county_data, apa_pop = AAC_MALE + AAC_FEMALE + NAC_MALE + NAC_FEMALE)
+##getting proper years
+county_data$year[county_data$year <= 3] <- 2010
+county_data$year[county_data$year == 4] <- 2011
+county_data$year[county_data$year == 5] <- 2012
+county_data$year[county_data$year == 6] <- 2013
+county_data$year[county_data$year == 7] <- 2014
+county_data$year[county_data$year == 8] <- 2015
+county_data$year[county_data$year == 9] <- 2016
+# county_data$year[county_data$year == 10] <- 2017
+##collapsing rows
+county_pop <- summaryBy(population ~ statefip + countyfips + year, FUN=c(sum), data = county_data)
+county_black_pop <- summaryBy(black_pop + population ~ statefip + countyfips + year, FUN=c(sum), data = county_data)
+county_hisp_pop <- summaryBy(hisp_pop + population ~ statefip + countyfips + year, FUN=c(sum), data = county_data)
+county_native_pop <- summaryBy(native_pop + population ~ statefip + countyfips + year, FUN=c(sum), data = county_data)
+county_apa_pop <- summaryBy(apa_pop + population ~ statefip + countyfips + year, FUN=c(sum), data = county_data)
+##calculating racial percentages percentages
+county_black_pop <- mutate(county_black_pop, per_black_pop = black_pop.sum / population.sum)
+county_hisp_pop <- mutate(county_hisp_pop, per_hisp_pop = hisp_pop.sum / population.sum)
+county_native_pop <- mutate(county_native_pop, per_native_pop = native_pop.sum / population.sum)
+county_apa_pop <- mutate(county_apa_pop, per_apa_pop = apa_pop.sum / population.sum)
+##make final datafile
+write.csv(county_pop, "county_pop.csv")
+write.csv(county_black_pop, "county_black_pop.csv")
+write.csv(county_hisp_pop, "county_hisp_pop.csv")
+write.csv(county_native_pop, "county_native_pop.csv")
+write.csv(county_apa_pop, "county_apa_pop.csv")
+##bringing in the hate crime data, cleaning it
+##home
+# setwd("C:/Users/cassa/Google Drive/Research Projects/hate_crimes")
+##work
+setwd("/mnt/DARCE/_Research/_Cassandra Duchan/research/hate_crimes/build/code")
+# setwd("Y:/_Research/_Cassandra Duchan/research/hate_crimes/build/code")
+library("tidyverse", warn.conflicts = FALSE)
+library("haven", warn.conflicts = FALSE)
+library("doBy", warn.conflicts = FALSE)
+setwd("/mnt/DARCE/_Research/_Cassandra Duchan/research/hate_crimes/build/inputs")
+# setwd("Y:/_Research/_Cassandra Duchan/research/hate_crimes/build/inputs")
+##loading in the micro hate crime data
+hc_2005 <- read_csv("hatecrimes_2005_micro.csv")
+hc_2006 <- read_csv("hatecrimes_2006_micro.csv")
+hc_2007 <- read_csv("hatecrimes_2007_micro.csv")
+hc_2008 <- read_csv("hatecrimes_2008_micro.csv")
+hc_2009 <- read_csv("hatecrimes_2009_micro.csv")
+hc_2010 <- read_csv("hatecrimes_2010_micro.csv")
+hc_2011 <- read_csv("hatecrimes_2011_micro.csv")
+hc_2012 <- read_csv("hatecrimes_2012_micro.csv")
+hc_2013 <- read_csv("hatecrimes_2013_micro.csv")
+hc_2014 <- read_csv("hatecrimes_2014_micro.csv")
+hc_2015 <- read_csv("hatecrimes_2015_micro.csv")
+hc_2016 <- read_csv("hatecrimes_2016_micro.csv")
+allhc <- rbind(hc_2005, hc_2006, hc_2007, hc_2008, hc_2009, hc_2010, hc_2012, hc_2011, hc_2013, hc_2014, hc_2015, hc_2016)
+rm(hc_2005, hc_2006, hc_2007, hc_2008, hc_2009, hc_2010, hc_2011, hc_2012, hc_2013, hc_2014, hc_2015, hc_2016)
+##cleaning
+# colnames(allhc)[colnames(allhc)=="REC_BH"] <- "hate_type"
+colnames(allhc)[colnames(allhc)=="STATNUM"] <- "state_full"
+colnames(allhc)[colnames(allhc)=="STATECOD"] <- "state_abbrev"
+colnames(allhc)[colnames(allhc)=="CFIPS1"] <- "countyfips"
+colnames(allhc)[colnames(allhc)=="TNUMVTMS"] <- "vctms_total"
+colnames(allhc)[colnames(allhc)=="TNUMOFF"] <- "offndrs_total"
+colnames(allhc)[colnames(allhc)=="GOFFRAC"] <- "offndrs_race"
+colnames(allhc)[colnames(allhc)=="AGINDIC"] <- "agncy_type"
+colnames(allhc)[colnames(allhc)=="OFFCOD1"] <- "offns_type1"
+colnames(allhc)[colnames(allhc)=="BIASMO1"] <- "type1"
+colnames(allhc)[colnames(allhc)=="NUMVTM1"] <- "vctms_num1"
+colnames(allhc)[colnames(allhc)=="LOCCOD1"] <- "offns_lctn1"
+colnames(allhc)[colnames(allhc)=="OFFCOD2"] <- "offns_type2"
+colnames(allhc)[colnames(allhc)=="BIASMO2"] <- "type2"
+colnames(allhc)[colnames(allhc)=="NUMVTM2"] <- "vctms_num2"
+colnames(allhc)[colnames(allhc)=="LOCCOD2"] <- "offns_lctn2"
+colnames(allhc)[colnames(allhc)=="OFFCOD3"] <- "offns_type3"
+colnames(allhc)[colnames(allhc)=="BIASMO3"] <- "type3"
+colnames(allhc)[colnames(allhc)=="NUMVTM3"] <- "vctms_num3"
+colnames(allhc)[colnames(allhc)=="LOCCOD3"] <- "offns_lctn3"
+colnames(allhc)[colnames(allhc)=="MASTERYR"] <- "year"
+drop = list("ORI", "JUDDIST","NBRSFLG", "POP3", "COUNTY3", "MSA3", "LSTPOP2",
+"LSTPOP3", "POP4", "COUNTY4", "MSA4", "LSTPOP4", "F4QACT",  "DATASRC",
+"POP5", "COUNTY5", "MSA5", "LSTPOP5", "CFIPS2", "ORIADDDT",
+"CFIPS3", "CFIPS4", "CFIPS5", "AGNAME", "F1QACT", "F2QACT", "F3QACT", "REC_IR",
+"ORINIBRS", "DIVISN", "REGION", "CORECTY", "COVBYORI", "FIELDNO", "INACTDTE",
+"OFFCOD1", "OFFCOD2", "OFFCOD3", "OFFCOD4", "OFFCOD5", "OFFCOD6", "OFFCOD7", "OFFCOD8", "OFFCOD9", "OFFCOD10",
+"BIASMO2", "BIASMO3", "BIASMO4", "BIASMO5", "BIASMO6", "BIASMO7", "BIASMO8", "BIASMO9", "BIASMO10",
+"NUMVTM2", "NUMVTM3", "NUMVTM4", "NUMVTM5", "NUMVTM6", "NUMVTM7", "NUMVTM8", "NUMVTM9", "NUMVTM10",
+"LOCCOD2", "LOCCOD3", "LOCCOD4", "LOCCOD5", "LOCCOD6", "LOCCOD7", "LOCCOD8", "LOCCOD9", "LOCCOD10",
+"VTYP_I1", "VTYP_I2", "VTYP_I3", "VTYP_I4", "VTYP_I5", "VTYP_I6", "VTYP_I7", "VTYP_I8", "VTYP_I9", "VTYP_I10",
+"VTYP_B1", "VTYP_B2", "VTYP_B3", "VTYP_B4", "VTYP_B5", "VTYP_B6", "VTYP_B7", "VTYP_B8", "VTYP_B9", "VTYP_B10",
+"VTYP_F1", "VTYP_F2", "VTYP_F3", "VTYP_F4", "VTYP_F5", "VTYP_F6", "VTYP_F7", "VTYP_F8", "VTYP_F9", "VTYP_F10",
+"VTYP_G1", "VTYP_G2", "VTYP_G3", "VTYP_G4", "VTYP_G5", "VTYP_G6", "VTYP_G7", "VTYP_G8", "VTYP_G9", "VTYP_G10",
+"VTYP_R1", "VTYP_R2", "VTYP_R3", "VTYP_R4", "VTYP_R5", "VTYP_R6", "VTYP_R7", "VTYP_R8", "VTYP_R9", "VTYP_R10",
+"VTYP_O1", "VTYP_O2", "VTYP_O3", "VTYP_O4", "VTYP_O5", "VTYP_O6", "VTYP_O7", "VTYP_O8", "VTYP_O9", "VTYP_O10",
+"VTYP_U1", "VTYP_U2", "VTYP_U3", "VTYP_U4", "VTYP_U5", "VTYP_U6", "VTYP_U7", "VTYP_U8", "VTYP_U9", "VTYP_U10",
+"VTYP_S1", "VTYP_S2", "VTYP_S3", "VTYP_S4", "VTYP_S5", "VTYP_S6", "VTYP_S7", "VTYP_S8", "VTYP_S9", "VTYP_S10",
+"QTR1ACT", "QTR2ACT", "QTR3ACT", "QTR4ACT")
+hc <- allhc[,!(names(allhc) %in% drop)]
+rm(drop, allhc)
+##creating new variables for analysis
+##crime type
+hc <- mutate(hc, anti_racial = type1)
+hc$anti_racial <- if_else(hc$anti_racial < 20 & hc$anti_racial >= 11 | hc$anti_racial == 32, 1, 0, missing = NULL)
+hc <- mutate(hc, anti_underrep = type1)
+hc$anti_underrep <- if_else(hc$anti_underrep < 20 & hc$anti_underrep >= 11 | hc$anti_underrep == 32, 1, 0, missing = NULL)
+hc <- mutate(hc, anti_black = type1)
+hc$anti_black <- if_else(hc$anti_black == 12, 1, 0, missing = NULL)
+hc <- mutate(hc, anti_hisp = type1)
+hc$anti_hisp <- if_else(hc$anti_hisp == 32, 1, 0, missing = NULL)
+hc <- mutate(hc, anti_apa = type1)
+hc$anti_apa <- if_else(hc$anti_apa == 14 | hc$anti_apa == 16, 1, 0, missing = NULL)
+hc <- mutate(hc, anti_native = type1)
+hc$anti_native <- if_else(hc$anti_native == 13, 1, 0, missing = NULL)
+##merge with county names
+county_names <- read_csv("countyfips.csv", col_names = FALSE)
+colnames(county_names) <- c("state_abbrev", "statefip", "countyfips", "county_name", "class_fips")
+hc <- merge(hc, county_names, by = c("state_abbrev", "countyfips"))
+rm(county_names)
+##merge with county pops & demographics (after 2010)
+##**these are just the 2010 Census population numbers, if there's time I will add this data
+county_pop <- read_csv("county_pop.csv")
+county_pop_before2010 <- read_csv("counties.csv")
+##**will come back when I figure out how to use the if_else statement for proper years and POC populations
+# if_else(hc$year < 2010, hc <- merge(hc, county_pop_before2010, by = c("statefip", "countyfips")), hc <- merge(hc, county_pop, by = c("statefip", "countyfips", "year")))
+hc <- merge(hc, county_pop_before2010, by = c("statefip", "countyfips"))
+county_pop_before2010$population <- as.numeric(county_pop_before2010$population)
+#collapsing rows
+attach(hc)
+black_crime_bycounty <- summaryBy(anti_black ~ countyfips + statefip + year + population, FUN=c(max,sum), data = hc)
+hisp_crime_bycounty <- summaryBy(anti_hisp ~ countyfips + statefip + year + population, FUN=c(max,sum), data = hc)
+apa_crime_bycounty <- summaryBy(anti_apa ~ countyfips + statefip + year + population, FUN=c(max,sum), data = hc)
+native_crime_bycounty <- summaryBy(anti_native ~ countyfips + statefip + year + population, FUN=c(max,sum), data = hc)
+racial_crime_bycounty <- summaryBy(anti_racial ~ countyfips + statefip + year + population, FUN=c(max,sum), data = hc)
+##creating hate crime per capita
+black_crime_bycounty <- mutate(black_crime_bycounty, crime_per_cap = anti_black.sum / population)
+hisp_crime_bycounty <- mutate(hisp_crime_bycounty, crime_per_cap = anti_hisp.sum / population)
+apa_crime_bycounty <- mutate(apa_crime_bycounty, crime_per_cap = anti_apa.sum / population)
+native_crime_bycounty <- mutate(native_crime_bycounty, crime_per_cap = anti_native.sum / population)
+racial_crime_bycounty <- mutate(racial_crime_bycounty, crime_per_cap = anti_racial.sum / population)
+##creating targeted hate crime per targeted capita
+##**don't have until aforementioned ifelse works out
+# black_crime_bycounty <- mutate(black_crime_bycounty, crime_per_cap = anti_black / black_pop.sum)
+# hisp_crime_bycounty <- mutate(hisp_crime_bycounty, crime_per_cap = anti_hisp / hisp_pop.sum)
+# apa_crime_bycounty <- mutate(apa_crime_bycounty, crime_per_cap = anti_apa / apa_pop.sum)
+# native_crime_bycounty <- mutate(native_crime_bycounty, crime_per_cap = anti_native / native_pop.sum)
+# racial_crime_bycounty <- mutate(racial_crime_bycounty, crime_per_cap = anti_racial / population)
+##make final datafile
+setwd("/mnt/DARCE/_Research/_Cassandra Duchan/research/hate_crimes/build/output")
+# setwd("Y:/_Research/_Cassandra Duchan/research/hate_crimes/build/output")
+write.csv(racial_crime_bycounty,'racial_crime_bycounty.csv')
+write.csv(hisp_crime_bycounty,'hisp_crime_bycounty.csv')
+write.csv(black_crime_bycounty,'black_crime_bycounty.csv')
+write.csv(apa_crime_bycounty,'apa_crime_bycounty.csv')
+write.csv(native_crime_bycounty,'native_crime_bycounty.csv')
+##bringing in the hate crime data, cleaning it
+##home
+# setwd("C:/Users/cassa/Google Drive/Research Projects/hate_crimes")
+##work
+setwd("/mnt/DARCE/_Research/_Cassandra Duchan/research/hate_crimes/build/code")
+# setwd("Y:/_Research/_Cassandra Duchan/research/hate_crimes/build/code")
+library("tidyverse", warn.conflicts = FALSE)
+library("haven", warn.conflicts = FALSE)
+library("doBy", warn.conflicts = FALSE)
+setwd("/mnt/DARCE/_Research/_Cassandra Duchan/research/hate_crimes/build/inputs")
+# setwd("Y:/_Research/_Cassandra Duchan/research/hate_crimes/build/inputs")
+##Loading in micro data from IPUMS
+acs_2005 <- read_csv("acs_data_2005.csv")
+acs_2006 <- read_csv("acs_data_2006.csv")
+acs_2007 <- read_csv("acs_data_2007.csv")
+acs_2008 <- read_csv("acs_data_2008.csv")
+acs_2009 <- read_csv("acs_data_2009.csv")
+acs_2010 <- read_csv("acs_data_2010.csv")
+acs_2011 <- read_csv("acs_data_2011.csv")
+acs_2012 <- read_csv("acs_data_2012.csv")
+acs_2013 <- read_csv("acs_data_2013.csv")
+acs_2014 <- read_csv("acs_data_2014.csv")
+acs_2015 <- read_csv("acs_data_2015.csv")
+acs_2016 <- read_csv("acs_data_2016.csv")
+acs <- rbind(acs_2005, acs_2006, acs_2007, acs_2008, acs_2009, acs_2010, acs_2011, acs_2012, acs_2013, acs_2014, acs_2015, acs_2016)
+acs <- data.frame(acs)
+rm(acs_2005, acs_2006, acs_2007, acs_2008, acs_2009, acs_2010, acs_2011, acs_2012, acs_2013, acs_2014, acs_2015, acs_2016)
+##creating race dummies
+acs <- mutate(acs, black = race)
+acs$black <- if_else(acs$black == 2, 1, 0, missing = NULL)
+acs <- mutate(acs, native = race)
+acs$native <- if_else(acs$native == 3, 1, 0, missing = NULL)
+acs <- mutate(acs, apa = race)
+acs$apa <- if_else(acs$apa >= 4 & acs$apa <= 6, 1, 0, missing = NULL)
+acs <- mutate(acs, hisp = hispan)
+acs$hisp <- if_else(acs$hisp > 0 & acs$hisp < 9, 1, 0, missing = NULL)
+##creating ancestry1 dummies
+acs <- mutate(acs, anc1_white = ancestr1)
+acs$anc1_white <- if_else(acs$anc1_white < 195 | acs$anc1_white <= 400 & acs$anc1_white < 5000 | acs$anc1_white >= 9240 & acs$anc1_white < 9950, 1, 0, missing = NULL)
+acs <- mutate(acs, anc1_hisp = ancestr1)
+acs$anc1_hisp <- if_else(acs$anc1_hisp >= 200 & acs$anc1_hisp < 300, 1, 0, missing = NULL)
+acs <- mutate(acs, anc1_black = ancestr1)
+acs$anc1_black <- if_else(acs$anc1_black >= 500 & acs$anc1_black < 600 | acs$anc1_black >= 9000 & acs$anc1_black < 9130, 1, 0, missing = NULL)
+acs <- mutate(acs, anc1_apa = ancestr1)
+acs$anc1_apa <- if_else(acs$anc1_apa >= 600 & acs$anc1_apa < 900, 1, 0, missing = NULL)
+acs <- mutate(acs, anc1_native = ancestr1)
+acs$anc1_native <- if_else(acs$anc1_native >= 913 & acs$anc1_native < 924, 1, 0, missing = NULL)
+##creating ancestry2 dummies
+acs <- mutate(acs, anc2_white = ancestr2)
+acs$anc2_white <- if_else(acs$anc2_white < 195 | acs$anc2_white <= 400 & acs$anc2_white < 5000 | acs$anc2_white >= 9240 & acs$anc2_white < 9950, 1, 0, missing = NULL)
+acs <- mutate(acs, anc2_hisp = ancestr2)
+acs$anc2_hisp <- if_else(acs$anc2_hisp >= 200 & acs$anc2_hisp < 300, 1, 0, missing = NULL)
+acs <- mutate(acs, anc2_black = ancestr2)
+acs$anc2_black <- if_else(acs$anc2_black >= 500 & acs$anc2_black < 600 | acs$anc2_black >= 9000 & acs$anc2_black < 9130, 1, 0, missing = NULL)
+acs <- mutate(acs, anc2_apa = ancestr2)
+acs$anc2_apa <- if_else(acs$anc2_apa >= 600 & acs$anc2_apa < 900, 1, 0, missing = NULL)
+acs <- mutate(acs, anc2_native = ancestr2)
+acs$anc2_native <- if_else(acs$anc2_native >= 913 & acs$anc2_native < 924, 1, 0, missing = NULL)
+##adding other dummies
+acs <- mutate(acs, black_anc = anc1_black	+ anc2_black)
+acs <- mutate(acs, black_only = black_anc)
+acs$black_only <- if_else(acs$black_only == 2, 1, 0, missing = NULL)
+acs <- mutate(acs, black_other = black_anc)
+acs$black_other <- if_else(acs$black_other == 1, 1, 0, missing = NULL)
+acs <- mutate(acs, black_none = black_anc)
+acs$black_none <- if_else(acs$black_none == 0, 1, 0, missing = NULL)
+acs <- mutate(acs, hisp_anc = anc1_hisp	+ anc2_hisp)
+acs <- mutate(acs, hisp_only = hisp_anc)
+acs$hisp_only <- if_else(acs$hisp_only == 2, 1, 0, missing = NULL)
+acs <- mutate(acs, hisp_other = hisp_anc)
+acs$hisp_other <- if_else(acs$hisp_other == 1, 1, 0, missing = NULL)
+acs <- mutate(acs, hisp_none = hisp_anc)
+acs$hisp_none <- if_else(acs$hisp_none == 0, 1, 0, missing = NULL)
+acs <- mutate(acs, apa_anc = anc1_apa	+ anc2_apa)
+acs <- mutate(acs, apa_only = apa_anc)
+acs$apa_only <- if_else(acs$apa_only == 2, 1, 0, missing = NULL)
+acs <- mutate(acs, apa_other = apa_anc)
+acs$apa_other <- if_else(acs$apa_other == 1, 1, 0, missing = NULL)
+acs <- mutate(acs, apa_none = apa_anc)
+acs$apa_none <- if_else(acs$apa_none == 0, 1, 0, missing = NULL)
+acs <- mutate(acs, native_anc = anc1_native	+ anc2_native)
+acs <- mutate(acs, native_only = native_anc)
+acs$native_only <- if_else(acs$native_only == 2, 1, 0, missing = NULL)
+acs <- mutate(acs, native_other = native_anc)
+acs$native_other <- if_else(acs$native_other == 1, 1, 0, missing = NULL)
+acs <- mutate(acs, native_none = native_anc)
+acs$native_none <- if_else(acs$native_none == 0, 1, 0, missing = NULL)
+##language
+acs <- mutate(acs, english = speakeng)
+acs$english <- if_else(acs$english > 1 & acs$english < 7 , 1, 0, missing = NULL)
+##summarizing by racial group hate crimes by county, year
+##if aggregates matter
+# black_bycounty <- summaryBy(black + anc1_black + anc2_black + region + metro + age ~ countyfips + statefip + year, FUN=c(max,sum, median), data = acs)
+# hisp_bycounty <- summaryBy(hisp + anc1_hisp	+ anc2_hisp ~ countyfips + statefip + year, FUN=c(max,sum), data = acs)
+# apa_bycounty <- summaryBy(apa + anc1_apa + anc2_apa ~ countyfips + statefip + year, FUN=c(max,sum), data = acs)
+# native_bycounty <- summaryBy(native + anc1_native + anc2_native ~ countyfips + statefip + year, FUN=c(max,sum), data = acs)
+##make final datafile
+setwd("/mnt/DARCE/_Research/_Cassandra Duchan/research/hate_crimes/build/output")
+# setwd("Y:/_Research/_Cassandra Duchan/research/hate_crimes/build/output")
+# write.csv(black_bycounty,'black_bycounty.csv')
+# write.csv(hisp_bycounty,'hisp_bycounty.csv')
+# write.csv(apa_bycounty,'apa_bycounty.csv')
+# write.csv(native_bycounty,'native_bycounty.csv')
+setwd("/mnt/DARCE/_Research/_Cassandra Duchan/research/hate_crimes/build/output")
+# setwd("Y:/_Research/_Cassandra Duchan/research/hate_crimes/build/output")
+##if aggregates matter
+# black_data <- merge(black_bycounty, black_crime_bycounty, by = c("statefip", "countyfips", "year"))
+# 	black_data <- mutate(black_data, black_anc = anc1_black.max	+ anc2_black.max)
+# 	black_data <- mutate(black_data, black_only = black_anc)
+# 	black_data$black_only <- if_else(black_data$black_only == 2, 1, 0, missing = NULL)
+# 	black_data <- mutate(black_data, black_other = black_anc)
+# 	black_data$black_other <- if_else(black_data$black_other == 1, 1, 0, missing = NULL)
+# 	black_data <- mutate(black_data, black_none = black_anc)
+# 	black_data$black_none <- if_else(black_data$black_none == 0, 1, 0, missing = NULL)
+# # rm(black_bycounty, black_crime_bycounty)
+# hisp_data <- merge(hisp_bycounty, hisp_crime_bycounty, by = c("statefip", "countyfips", "year"))
+# 	hisp_data <- mutate(hisp_data, hisp_anc = anc1_hisp.max	+ anc2_hisp.max)
+# 	hisp_data <- mutate(hisp_data, hisp_only = hisp_anc)
+# 	hisp_data$hisp_only <- if_else(hisp_data$hisp_only == 2, 1, 0, missing = NULL)
+# 	hisp_data <- mutate(hisp_data, hisp_other = hisp_anc)
+# 	hisp_data$hisp_other <- if_else(hisp_data$hisp_other == 1, 1, 0, missing = NULL)
+# 	hisp_data <- mutate(hisp_data, hisp_none = hisp_anc)
+# 	hisp_data$hisp_none <- if_else(hisp_data$hisp_none == 0, 1, 0, missing = NULL)
+# # rm(hisp_bycounty, hisp_crime_bycounty)
+# apa_data <- merge(apa_bycounty, apa_crime_bycounty, by = c("statefip", "countyfips", "year"))
+# 	apa_data <- mutate(apa_data, apa_anc = anc1_apa.max	+ anc2_apa.max)
+# 	apa_data <- mutate(apa_data, apa_only = apa_anc)
+# 	apa_data$apa_only <- if_else(apa_data$apa_only == 2, 1, 0, missing = NULL)
+# 	apa_data <- mutate(apa_data, apa_other = apa_anc)
+# 	apa_data$apa_other <- if_else(apa_data$apa_other == 1, 1, 0, missing = NULL)
+# 	apa_data <- mutate(apa_data, apa_none = apa_anc)
+# 	apa_data$apa_none <- if_else(apa_data$apa_none == 0, 1, 0, missing = NULL)
+# # rm(apa_bycounty, apa_crime_bycounty)
+# native_data <- merge(native_bycounty, native_crime_bycounty, by = c("statefip", "countyfips", "year"))
+# 	native_data <- mutate(native_data, native_anc = anc1_native.max	+ anc2_native.max)
+# 	native_data <- mutate(native_data, native_only = native_anc)
+# 	native_data$native_only <- if_else(native_data$native_only == 2, 1, 0, missing = NULL)
+# 	native_data <- mutate(native_data, native_other = native_anc)
+# 	native_data$native_other <- if_else(native_data$native_other == 1, 1, 0, missing = NULL)
+# 	native_data <- mutate(native_data, native_none = native_anc)
+# 	native_data$native_none <- if_else(native_data$native_none == 0, 1, 0, missing = NULL)
+# rm(native_bycounty, native_crime_bycounty)
+# write.csv(black_data,'black_data.csv')
+# write.csv(hisp_data,'hisp_data.csv')
+# write.csv(apa_data,'apa_data.csv')
+# write.csv(native_data,'native_data.csv')
+acs <- merge(acs, apa_crime_bycounty, by = c("statefip", "countyfips", "year"))
+acs <- merge(acs, black_crime_bycounty, by = c("statefip", "countyfips", "year"))
+acs <- merge(acs, hisp_crime_bycounty, by = c("statefip", "countyfips", "year"))
+acs <- merge(acs, native_crime_bycounty, by = c("statefip", "countyfips", "year"))
+acs <- merge(acs, racial_crime_bycounty, by = c("statefip", "countyfips", "year"))
+hisp_reg <- lm(hisp ~ hisp_only*anti_hisp.max + hisp_other*anti_hisp.max + hisp_none*anti_hisp.max + age + sex + educ + inctot, data = acs)
+coef(summary(hisp_reg))
+hisp_reg <- lm(hisp ~ hisp_only*anti_hisp.max + hisp_other*anti_hisp.max + hisp_none*anti_hisp.max + age + sex + educ + inctot + paste(statefip, countyfips), data = acs)
+coef(summary(hisp_reg))
+library("stargazer", lib.loc="/mnt/vol_edp_home/adap_home/m1crd01/R/x86_64-redhat-linux-gnu-library/3.4")
+stargazer(hisp_reg, black_reg)
+black_reg <- lm(black ~ black_only*anti_black.max + black_other*anti_black.max + black_none*anti_black.max + age + sex + educ + inctot, data = acs)
+stargazer(hisp_reg, black_reg)
+hisp_reg <- lm(hisp ~ hisp_only*anti_hisp.max + hisp_other*anti_hisp.max + hisp_none*anti_hisp.max + age + sex + educ + inctot, data = acs)
+stargazer(hisp_reg, black_reg)
+stargazer(hisp_reg, black_reg,
+column.labels=c("Hispanic Identification","Black Identification"), align=TRUE)
+# dep.var.labels=c("Hispanic Identification","
+hisp_reg <- lm(hisp ~ hisp_only*anti_hisp.max + hisp_other*anti_hisp.max + hisp_none*anti_hisp.max + age + sex + educ + inctot, data = acs)
+hisp_reg <- lm(hisp ~ hisp_only*anti_hisp.max + hisp_other*anti_hisp.max + hisp_none*anti_hisp.max + age + sex + educ + inctot, data = acs)
+black_reg <- lm(black ~ black_only*anti_black.max + black_other*anti_black.max + black_none*anti_black.max + age + sex + educ + inctot, data = acs)
+stargazer(hisp_reg, black_reg,
+column.labels=c("Hispanic Identification","Black Identification"), align=TRUE)
+colames(acs)
+colnames(acs)
+head(acs$anti_black.sum)
+head(acs$anti_black.sum, 60)
+head(acs$anti_black.sum, 600)
+head(acs$anti_black.max,  600)
+head(acs$anti_hisp.sum, 600)
+hc <- mutate(hc, anti_racial = type1)
+hc$anti_racial <- if_else(hc$anti_racial < 20 & hc$anti_racial >= 11 | hc$anti_racial == 32, 1, 0, missing = NULL)
+hc <- mutate(hc, anti_black = type1)
+hc$anti_black <- if_else(hc$anti_black == 12, 1, 0, missing = NULL)
+head(hc$anti_black, 600)
+black_crime_bycounty <- summaryBy(anti_black ~ countyfips + statefip + year + population, FUN=c(max,sum), data = hc)
+head(black_crime_bycounty$anti_black.sum, 600)
+head(acs$anti_black.sum, 600)
+acs <- merge(acs, black_crime_bycounty, by = c("statefip", "countyfips", "year"))
+head(acs$anti_black.sum, 600)
+racial_crimes <- table(hc$anti_black, hc$anti_hisp, hc$anti_apa, hc$anti_native)
+barplot(counts, main="Car Distribution by Gears and VS",
+xlab="Number of Gears", col=c("darkblue","red"),
+legend = rownames(racial_crimes))
+racial_crimes <- table(hc$anti_black, hc$anti_hisp, hc$anti_apa, hc$anti_native)
+barplot(racial_crimes, main="Car Distribution by Gears and VS",
+xlab="Number of Gears", col=c("darkblue","red"),
+legend = rownames(racial_crimes))
