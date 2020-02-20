@@ -1,0 +1,122 @@
+---
+title: "Hate Crimes & Ethinic Attrition"
+author: "Cassandra Duchan Saucedo"
+date: "June 29, 2019"
+output: beamer_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+library(tidyverse)
+library(ggplot2)
+
+setwd("/mnt/DARCE/_Research/_Cassandra Duchan/research/hate_crimes/analysis/visuals")
+
+source("/mnt/DARCE/_Research/_Cassandra Duchan/research/hate_crimes/build/code/county_clean.R")
+# source("/mnt/DARCE/_Research/_Cassandra Duchan/research/hate_crimes/build/code/acs_clean.R")
+source("/mnt/DARCE/_Research/_Cassandra Duchan/research/hate_crimes/build/code/hc_clean.R")
+```
+
+## Introduction
+- Racial self-identity is malleable, with individuals choosing when, where, and whether to signal affiliation with particular racial groups
+- One plausible determinant of racial identity is the differential risk faced by individuals of different identities
+- Crime directed at people \emph{because} of their identity may be a particularly strong motivation to identify differently
+-  Because racial hate crimes are rare, they are indicative of greater racial tensions in an area and can serve as a proxy for greater discrimination against targeted groups, overall
+
+## Research Question
+
+Does the presence of hate crimes affect racial or ethnic identities that are self-reported in surveys?
+
+## Structure
+- Tie incentives in racial self-identification to common theories about racial experiences with crime and identity
+- Examine the data, describing patterns in the racial, ethnic, and ancestry response in the American Community Survey (ACS) 
+- Analyze the relationship between the presence of racial hate crimes within an area, and racial identification using the Uniform Crime Report (UCR)
+
+## Literature 
+Builds on literature investigating how changing incentives or circumstances to identify with particular racial groups shape observed identifications:
+- Antman et al (2016): 
+- Antman et al (2015): Use changes to affirmative action policies to show that reducing economic incentives to self-identify with a racial group causes individuals' associations with said group to decline
+- Trejo (1997) and Trejo \& Duncan (2018): 	Measure identification of Hispanics and Mexican-Americans related to income    
+- Telles \& Ortiz (2008) and Duncan et al (2017): Measure identification of Hispanics and Mexican-Americans related to levels of educational attainment
+
+## Data
+- Hate Crimes: 2005-2016 FBI Uniform Crime Reporting Program Data: Hate Crime Data (Record-Type Files)
+- Demographic Data: 2005-2016 American Community Survey
+- County Data: U.S. 2010 Census
+
+## Hate Crimes
+- Hate crimes are defined as crimes perpetrated against a person because of race, religion, sexual orientation, or ethnicity
+- Includes crimes of murder and non-negligent manslaughter, forcible rape, aggravated assault, simple assault, intimidation, arson, and destruction, damage or vandalism of property
+- Law enforcement agencies report directly to the FBI or through their state reporting programs
+- This study focuses on racially-motivated hate crimes
+
+## Hate Crime Frequency & Type by Year
+```{r out.width = "75%", warning = FALSE}
+cbPalette <- c("#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7", "#999999")
+
+hc_plot <- ggplot(hc, aes(year))
+
+hc_plot + 
+  geom_bar(aes(fill = hc_type)) + 
+  scale_fill_manual(values=cbPalette) +
+  theme_minimal() +
+  xlab("Year") + ylab("Hate Crime Count") + 
+  guides(fill=guide_legend(title="Hate Crime Type"))
+
+```
+\small{
+\begin{itemize}
+  \item Racially-motivated hate crimes make up over half of all reported hate crimes over this time period in the US
+  \item Other includes all offenses motivated bias against a religion, disability, sexual orientation, ethnicity, gender, or gender identity (FBI, 2018)
+\end{itemize}}
+
+\tiny{Source: Federal Bureau of Investigation Uniform Crime Reporting Program Data: Hate Crime Data (Record-Type Files), United States, 2005-2016}
+
+
+## Geographic Distribution
+
+![All racially-motivated hate crimes by county 2005-2016](/mnt/DARCE/_Research/_Cassandra Duchan/research/hate_crimes/analysis/visuals/all_hc_2005_2016.png)
+
+\tiny Source: United States Federal Bureau of Investigation Uniform Crime Reporting Program Data: Hate Crime Data (Record-Type Files), 2005-2016.
+
+## Geographic Distribution
+
+![Racially-motivated hate crimes per capita by county 2005-2016](/mnt/DARCE/_Research/_Cassandra Duchan/research/hate_crimes/analysis/visuals/all_hc_percap_2005_2016.png)
+
+\tiny Source: United States Federal Bureau of Investigation Uniform Crime Reporting Program Data: Hate Crime Data (Record-Type Files), 2005-2016.
+
+- Hate crimes per capita shows a different story, with hate crimes more relatively prevalent in smaller counties in the middle of the US
+
+## Reporting Issues
+- The UCR is not an exhaustive source for all hate crimes, but these crimes are an interesting tool for measurement because they are more likely to gain attention because they are reported to the police
+
+## Racial or Ethnic Identity \& Ancestry
+- Race e.g., "Black, African-American or Negro", and White
+- Hispanic origin e.g., Different subcategories of Hispanic, Latino, or Spanish Origin such as Puerto Rican or Not of Hispanic, Latino, or Spanish Origin 
+- Ancestry e.g., Italian, Cambodian, and Haitian
+    \begin{itemize}
+        \item Respondents are allowed to write in one or more ancestral responses
+    \end{itemize}
+- In this study, each race and ethnicity is considered separately, so this discrepancy between race and ethnicity does not arise
+
+## Methods: Presence of Any Targeted Crime
+  <!-- \begin{equation} -->
+  <!-- \raggedleft -->
+    $$GroupIdentity_{ijt} = \\ 
+    \alpha + \beta_{0} \big(AntiGroupCrime_{jt} \big) + \\
+    \beta_{1}  \big( AntiGroupCrime_{jt} * GroupAncestryOnly_{ijt} \big) + \\
+    \beta_{2}  \big( AntiGroupCrime_{jt} * GroupAndOtherAncestry_{ijt} \big) + \\
+    X_{ijt} + \gamma_{t}  + \delta_{j} + \epsilon_{t}$$ 
+
+\begin{itemize}
+    \item GroupIdentity: dummy variable measuring whether individual identifies as the group targeted by a hate crime, within county j at time t 
+    \item AntiGroupHateCrime: dummy indicating the presence of any group-targeted hate crime, in a given county during a given year
+    \item GroupAncestry: reported ancestry comprised of either fully or half of the group targeted by a hate crime, an individual at time t
+\end{itemize}
+        
+## Robustness Checks
+\begin{itemize}
+  \item Targeted group-targeted crime per 1000 people, within county j at time t
+  \item Number of group-targeted hate crimes, within county j at time t - mean of these hate crimes over the analyzed time period
+\end{itemize}
